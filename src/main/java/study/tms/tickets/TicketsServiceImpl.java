@@ -45,6 +45,7 @@ public class TicketsServiceImpl implements TicketsService {
     }
 
     @Override
+    @Transactional
     public Ticket addComment(Long ticketId, Long userId, Comment comment) {
         Ticket ticket = ticketRepository.findById(ticketId).orElseThrow(() -> new TicketNotFoundException(ticketId));
         comment.setAuthor(usersRepository.findById(userId).orElseThrow(() -> new UserNotFoundException(userId)));
