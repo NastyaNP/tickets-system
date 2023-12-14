@@ -1,0 +1,30 @@
+services:
+  tms:
+#    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+
+  postgres:
+    image: 'postgres:latest'
+    restart: always
+    environment:
+      - 'POSTGRES_DB=postgres'
+      - 'POSTGRES_PASSWORD=123123'
+      - 'POSTGRES_USER=postgres'
+    ports:
+      - '5432:5432'
+
+  pgadmin:
+    image: 'dpage/pgadmin4'
+    environment:
+        - 'PGADMIN_DEFAULT_EMAIL=test@gmail.com'
+        - 'PGADMIN_DEFAULT_PASSWORD=123123'
+    ports:
+        - '82:80'
+    depends_on:
+        - postgres
