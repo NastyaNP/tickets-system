@@ -26,7 +26,17 @@ public class TicketsServiceImpl implements TicketsService {
     @Transactional
     public Ticket updateTicket(Long id, TicketDto ticket) throws TicketNotFoundException {
         Ticket ticketToUpdate = ticketRepository.findById(id).orElseThrow(() -> new TicketNotFoundException(id));
-        ticketMapper.updateTicketFromDto(ticket, ticketToUpdate);
+        if (ticket.getTitle() != null) {
+            ticketToUpdate.setTitle(ticket.getTitle());
+        }
+
+        if (ticket.getDescription() != null) {
+            ticketToUpdate.setDescription(ticket.getDescription());
+        }
+
+        if (ticket.getPriority() != null) {
+            ticketToUpdate.setPriority(ticket.getPriority());
+        }
         return ticketRepository.save(ticketToUpdate);
     }
 
