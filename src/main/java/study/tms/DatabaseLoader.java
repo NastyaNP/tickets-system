@@ -20,12 +20,12 @@ public class DatabaseLoader implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        var ticket1 = createMockTicket("Test Title", "Some description", "High", "Open");
-        var ticket2 = createMockTicket("Test Title 2", "Some description 2", "Low", "In Progress");
-        var ticket3 = createMockTicket("Test Title 3", "Some description 3", "Medium", "Closed");
-        var user1 = createMockUser("John", "Doe");
-        var user2 = createMockUser("Jane", "Doe");
-        var user3 = createMockUser("John", "Smith");
+//        var ticket1 = createMockTicket("Test Title", "Some description", "High", "Open");
+//        var ticket2 = createMockTicket("Test Title 2", "Some description 2", "Low", "In Progress");
+//        var ticket3 = createMockTicket("Test Title 3", "Some description 3", "Medium", "Closed");
+//        var user1 = createMockUser("John", "Doe");
+//        var user2 = createMockUser("Jane", "Doe");
+//        var user3 = createMockUser("John", "Smith");
 //        usersService.addTicketToUser(user1.getId(), ticket1.getId());
 //        usersService.addTicketToUser(user1.getId(), ticket2.getId());
 //        usersService.addTicketToUser(user2.getId(), ticket3.getId());
