@@ -7,7 +7,7 @@ import study.tms.users.UserDto;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-12-14T05:51:13+0300",
+    date = "2023-12-16T03:35:28+0300",
     comments = "version: 1.6.0.Beta1, compiler: javac, environment: Java 21.0.1 (Oracle Corporation)"
 )
 @Component
